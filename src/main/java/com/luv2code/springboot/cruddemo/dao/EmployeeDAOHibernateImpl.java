@@ -2,6 +2,9 @@ package com.luv2code.springboot.cruddemo.dao;
 
 import java.util.List;
 
+import javax.persistence.EntityManager;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.luv2code.springboot.cruddemo.entity.Employee;
@@ -10,9 +13,13 @@ import com.luv2code.springboot.cruddemo.entity.Employee;
 public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 
 	// define field for entitymanager
-	
+	private EntityManager entityManager;
 	
 	// setup constructor injection
+	@Autowired
+	public EmployeeDAOHibernateImpl(EntityManager theEntityManager) {
+		entityManager = theEntityManager;
+	}
 	
 	
 	@Override
