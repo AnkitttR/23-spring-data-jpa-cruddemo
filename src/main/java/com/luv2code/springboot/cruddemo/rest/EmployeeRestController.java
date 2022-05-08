@@ -19,15 +19,15 @@ public class EmployeeRestController {
 	
 	// quick & dirty: inject employee DAO (Use constructor injection)
 	@Autowired
-	public EmployeeRestController(EmployeeDAO theEmployeeDAO) {
-		employeeDAO = theEmployeeDAO;
+	public EmployeeRestController(EmployeeService theEmployeeService) {
+		employeeService = theEmployeeService;
 	}
 	
 	// expose "/employees" & return list of employees
 	@GetMapping("/employees")
 	public List<Employee> findAll() {
 		
-		return employeeDAO.findAll();
+		return employeeService.findAll();
 		
 	}
 }
