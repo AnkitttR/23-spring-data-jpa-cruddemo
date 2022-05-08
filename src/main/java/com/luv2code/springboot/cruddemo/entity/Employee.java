@@ -27,6 +27,9 @@ public class Employee {
 	private String email;
 	
 	// define constructors
+	public Employee() {  // No argument constructor required by Hibernate
+		
+	}
 	
 	// define getter/setter
 	
