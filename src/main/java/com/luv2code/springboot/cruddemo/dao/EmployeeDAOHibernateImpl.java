@@ -26,7 +26,6 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 	
 	
 	@Override
-	@Transactional
 	public List<Employee> findAll() {
 		
 		// get the current hibernate session
@@ -60,7 +59,12 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 
 	@Override
 	public void save(Employee theEmployee) {
-		// TODO Auto-generated method stub
+		 
+		// get the current hibernate session
+		
+		// get the employee
+		
+		// save the employee to database
 		
 	}
 
