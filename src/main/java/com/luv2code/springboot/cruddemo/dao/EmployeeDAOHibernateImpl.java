@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,6 +33,7 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 		Session currentSession = entityManager.unwrap(Session.class);
 		
 		// create a query
+		Query<Employee> theQuery = 	currentSession.createQuery("from Employee", Employee.class);
 		
 		// execute query and get result list
 		
