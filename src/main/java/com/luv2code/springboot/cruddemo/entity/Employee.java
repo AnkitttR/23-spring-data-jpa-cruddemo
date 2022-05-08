@@ -30,6 +30,13 @@ public class Employee {
 	public Employee() {  // No argument constructor required by Hibernate
 		
 	}
+
+	public Employee(String firstName, String lastName, String email) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+	
 	
 	// define getter/setter
 	
