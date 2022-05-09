@@ -22,28 +22,24 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
-	@Transactional
 	public List<Employee> findAll() {
 		
 		return employeeRepository.findAll();
 	}
 
 	@Override
-	@Transactional
 	public Employee findById(int theId) {
 		
 		return employeeRepository.findById(theId);
 	}
 
 	@Override
-	@Transactional
 	public void save(Employee theEmployee) {
 		employeeRepository.save(theEmployee);
 
 	}
 
 	@Override
-	@Transactional
 	public void deleteById(int theId) {
 		employeeRepository.deleteById(theId);
 
