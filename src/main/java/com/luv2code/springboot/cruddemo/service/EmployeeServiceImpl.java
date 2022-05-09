@@ -13,7 +13,7 @@ import com.luv2code.springboot.cruddemo.entity.Employee;
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 	
-	private EmployeeDAO employeeDAO;
+	private EmployeeRepository employeeRepository;
 	
 	@Autowired
 	public EmployeeServiceImpl(@Qualifier("employeeDAOJpaImpl") EmployeeDAO theEmployeeDAO) {  // constructor injection
