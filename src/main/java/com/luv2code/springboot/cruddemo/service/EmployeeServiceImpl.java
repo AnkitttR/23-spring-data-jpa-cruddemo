@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.luv2code.springboot.cruddemo.dao.EmployeeDAO;
+import com.luv2code.springboot.cruddemo.dao.EmployeeRepository;
 import com.luv2code.springboot.cruddemo.entity.Employee;
 
 @Service
@@ -16,8 +17,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 	private EmployeeRepository employeeRepository;
 	
 	@Autowired
-	public EmployeeServiceImpl(@Qualifier("employeeDAOJpaImpl") EmployeeDAO theEmployeeDAO) {  // constructor injection
-		employeeDAO = theEmployeeDAO;
+	public EmployeeServiceImpl(EmployeeRepository theEmployeeRepository) {  // constructor injection
+		employeeRepository = theEmployeeRepository;
 	}
 
 	@Override
